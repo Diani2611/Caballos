@@ -1,0 +1,50 @@
+
+function menupagina() {
+	document.getElementById('menupagina').innerHTML = '';
+	document.getElementById('menupagina').innerHTML += `
+
+		<li class="nav-item">
+         <a class="nav-link active" href="#">
+           <span data-feather="layers"></span>
+           Editar Contenidos <span class="sr-only">(current)</span>
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="menu.php">
+           <span data-feather="menu"></span>
+           Editar Menú
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#">
+           <span data-feather="image"></span>
+           Editar Slider
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#">
+           <span data-feather="file-text"></span>
+           Información
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#">
+           <span data-feather="users"></span>
+           Editar usuarios
+         </a>
+       </li>			
+	
+	
+	`;
+}
+
+//------------------funcion pregunta borrar----------
+
+function preguntas(llave, dato, dator){
+	
+	if(confirm("Esta seguro de eliminar el registro"))
+		document.location.href="principal.php?da=" + dato + "&lla=" + llave + "&dar=" + dator;
+	else
+		document.location.href="principal.php?da="+ dator; 
+}
+
